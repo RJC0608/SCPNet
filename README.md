@@ -1,2 +1,2 @@
 # SCPNet
-Release the code later.
+ “Semantic-spatial guided Context Propagation Network for Camouflaged Object Detection”
