@@ -181,9 +181,9 @@ class CPM(nn.Module):
         x1 = xg
         x2 = xe
         xc = self.conv192_64(torch.cat((x1, x2, x), dim=1))
-        out = self.aspp(xc)
-        out = self.ca(out) + out
-        final = self.cbr(out)
+        out1 = self.aspp(xc)
+        out = self.ca(out1) * out1
+        final = out + out1
         return final
 
 class Network(nn.Module):
